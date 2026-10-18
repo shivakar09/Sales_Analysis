@@ -1,0 +1,31 @@
+relationship eb1ea1d6-3ea1-7913-b31d-a086095f2be3
+	fromColumn: 'Fact Table'.CustomerID
+	toColumn: 'Dim Customers'.'Customer ID'
+
+relationship 58f26970-2358-fd87-c885-fa8ee0598500
+	fromColumn: 'Fact Table'.PromotionID
+	toColumn: 'Dim Promotion'.PromotionID
+
+relationship 6ed396b3-151a-b81f-5805-458114b20f72
+	fromColumn: 'Fact Table'.'Product ID'
+	toColumn: 'Dim Product'.ProductID
+
+relationship b467b9c3-0b8d-4bb2-93ec-96c64616300f
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Date Table 1'.Date
+	toColumn: LocalDateTable_9db9bf4f-afcb-4892-ba22-f22ac352002f.Date
+
+relationship 972fef65-23f2-4cb5-b595-7f14e934946c
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Date Table 2'.Date
+	toColumn: LocalDateTable_74ad30e9-1fe6-4b37-a80a-71df6d7065f6.Date
+
+relationship 67630a9a-7709-de53-314b-eee98667691e
+	fromColumn: 'Fact Table'.'Date (dd/mm/yyyy)'
+	toColumn: 'Date Table 1'.Date
+
+relationship 6ce5bed2-18ee-3069-5de1-45ea7c4f37ea
+	isActive: false
+	fromColumn: 'Fact Table'.'Date (dd/mm/yyyy)'
+	toColumn: 'Date Table 2'.Date
+

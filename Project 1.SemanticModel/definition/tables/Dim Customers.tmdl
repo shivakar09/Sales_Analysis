@@ -1,0 +1,78 @@
+table 'Dim Customers'
+	lineageTag: 28bf103a-5266-4e31-a3cd-30b905c8bc0b
+
+	column 'Customer ID'
+		dataType: string
+		lineageTag: c1de1e73-6cf8-47d8-a6bd-48d0822bca34
+		summarizeBy: none
+		sourceColumn: Customer ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Customer Name'
+		dataType: string
+		lineageTag: c45e113f-f83d-4eef-9a9a-a6a72fe3a855
+		summarizeBy: none
+		sourceColumn: Customer Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column City
+		dataType: string
+		lineageTag: b6bd62f3-6756-40f5-a7ae-626e7dc93391
+		dataCategory: City
+		summarizeBy: none
+		sourceColumn: City
+
+		annotation SummarizationSetBy = Automatic
+
+	column State
+		dataType: string
+		lineageTag: f3da9a8f-c067-476e-9c68-635e73a948e3
+		summarizeBy: none
+		sourceColumn: State
+
+		annotation SummarizationSetBy = Automatic
+
+	column Pincode
+		dataType: int64
+		formatString: 0
+		lineageTag: 17fe57fc-afe3-4353-a221-985baec36bdd
+		summarizeBy: none
+		sourceColumn: Pincode
+
+		annotation SummarizationSetBy = Automatic
+
+	column EmailID
+		dataType: string
+		lineageTag: b255a92f-5ed7-43dc-9181-a7ff56e1d0a0
+		summarizeBy: none
+		sourceColumn: EmailID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Phone Number'
+		dataType: int64
+		formatString: 0
+		lineageTag: b7a174a2-d24b-4d17-928b-dea50cd3e3d3
+		summarizeBy: none
+		sourceColumn: Phone Number
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Dim Customers' = m
+		mode: import
+		source =
+				let
+				  Source = Excel.Workbook(File.Contents("D:\data analytics\23. Power BI Project 1, Sales Data Analysis (Covers Data Modeling Concepts)\2. Store Data.xlsx"), null, true),
+				  #"Navigation 1" = Source{[Item = "Dim Customers", Kind = "Sheet"]}[Data],
+				  #"Promoted headers" = Table.PromoteHeaders(#"Navigation 1", [PromoteAllScalars = true]),
+				  #"Changed column type" = Table.TransformColumnTypes(#"Promoted headers", {{"Customer ID", Int64.Type}, {"Customer Name", type text}, {"City", type text}, {"State", type text}, {"Pincode", Int64.Type}, {"EmailID", type text}, {"Phone Number", Int64.Type}}, "en-US"),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Changed column type",{{"Customer ID", type text}})
+				in
+				  #"Changed Type"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

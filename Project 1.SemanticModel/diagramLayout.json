@@ -1,0 +1,113 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 945.71638334802685,
+            "y": 0
+          },
+          "nodeIndex": "Dim Customers",
+          "nodeLineageTag": "28bf103a-5266-4e31-a3cd-30b905c8bc0b",
+          "size": {
+            "height": 248,
+            "width": 234
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 24,
+            "y": 0
+          },
+          "nodeIndex": "Dim Product",
+          "nodeLineageTag": "672627c6-9b74-45d3-b355-ca01b61324cf",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 191.38305001469337,
+            "y": 271.42234897992296
+          },
+          "nodeIndex": "Dim Promotion",
+          "nodeLineageTag": "c1350503-3292-41d9-a255-e624b02fd109",
+          "size": {
+            "height": 235,
+            "width": 234
+          },
+          "zIndex": 3
+        },
+        {
+          "location": {
+            "x": 536.201561193185,
+            "y": 0
+          },
+          "nodeIndex": "Fact Table",
+          "nodeLineageTag": "9e2572f6-02b5-42c9-892e-03a0f6789162",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 4
+        },
+        {
+          "location": {
+            "x": 566.95447858612215,
+            "y": 466.73498401377105
+          },
+          "nodeIndex": "Date Table 1",
+          "nodeLineageTag": "03e3cbff-87dd-414a-addd-08b0f2755a42",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 6
+        },
+        {
+          "location": {
+            "x": 908.33543096707456,
+            "y": 403.21117448996159
+          },
+          "nodeIndex": "Date Table 2",
+          "nodeLineageTag": "f682f1a3-c6a9-441c-85f0-0fab64a7818b",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 5
+        },
+        {
+          "location": {
+            "x": 33.716348470794628,
+            "y": 591.36749200688564
+          },
+          "nodeIndex": "Measures Table",
+          "nodeLineageTag": "fe3374e1-752c-4534-ab53-8dd9992b5d67",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 7
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 70,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}

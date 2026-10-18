@@ -1,0 +1,27 @@
+table 'Date Table 2'
+	lineageTag: f682f1a3-c6a9-441c-85f0-0fab64a7818b
+
+	column Date
+		formatString: Long Date
+		lineageTag: bedb2f75-ba9a-404a-b524-6fefdc7a87e9
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Date]
+
+		variation Variation
+			isDefault
+			relationship: 972fef65-23f2-4cb5-b595-7f14e934946c
+			defaultHierarchy: LocalDateTable_74ad30e9-1fe6-4b37-a80a-71df6d7065f6.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	partition 'Date Table 2' = calculated
+		mode: import
+		source = ```
+				CALENDARAUTO() 
+				```
+
+	annotation PBI_Id = 1fca81c248134a12b3874a652ec3640e
+

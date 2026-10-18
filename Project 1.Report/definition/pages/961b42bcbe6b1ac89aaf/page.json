@@ -1,0 +1,20 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
+  "name": "961b42bcbe6b1ac89aaf",
+  "displayName": "Table Visual",
+  "displayOption": "FitToPage",
+  "height": 1080,
+  "width": 1920,
+  "pageBinding": {
+    "name": "c951e465d76de5a80900",
+    "type": "Default",
+    "parameters": []
+  },
+  "visualInteractions": [
+    {
+      "source": "f3644eef2b5cd41a69c3",
+      "target": "90703ca45fe35216e053",
+      "type": "NoFilter"
+    }
+  ]
+}
