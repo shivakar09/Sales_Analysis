@@ -37,10 +37,10 @@ The project uses publicly available retail sales data organised into four main t
 ## Dashboard Preview
 
 ![ElectroHub Sales Dashboard](dashboard-overview.png)
-![ElectroHub Sales Dashboard](TopBottom20520Analysis.png)
-![ElectroHub Sales Dashboard](Comparison20SalesProfitQuantity.png)
-![ElectroHub Sales Dashboard](Edit20Interactions.png)
-![ElectroHub Sales Dashboard](Table20Visual.png)
+![ElectroHub Sales Dashboard](TopBottomAnalysis.png)
+![ElectroHub Sales Dashboard](ComparisonSalesProfitQuantity.png)
+![ElectroHub Sales Dashboard](EditInteractions.png)
+![ElectroHub Sales Dashboard](TableVisual.png)
 
 ## Analysis Highlights
 
